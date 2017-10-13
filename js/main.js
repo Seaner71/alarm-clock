@@ -1,14 +1,39 @@
-var dat= new Date();
-var hr=dat.getHours();
-var min=dat.getMinutes();
-var sec=dat.getSeconds();
-
-
-
-var time = document.querySelector('#clock')
 currentTime = function() {
-  time.innerHTML = Date();
+var time = document.querySelector('#clock')
+var date= new Date();
+// ternary operators instead of later if statements
+var hrs=date.getHours(); hrs < 10? hrs ='0'+hrs: hrs = date.getHours();
+var mins=date.getMinutes(); mins < 10? mins ='0'+mins: mins = date.getMinutes();
+var secs= date.getSeconds(); secs < 10? secs ='0'+secs: secs = date.getSeconds();
+var color = document.querySelector("#back-ground");
+
+function randHex() {
+    const hexChars = [0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f']
+    let result = '#';
+    for (let i =0; i < 6; i++){
+      let randIndex = Math.floor(Math.random()* hexChars.length);
+      result += hexChars[randIndex];
+    }
+    return result;
+  }
+
+  var hexTime =  '#' +hrs+mins+secs;
+  var normalTime = `${hrs}:${mins}:${secs}`
+  time.innerHTML = hexTime;
+  color.style.backgroundColor = hexTime ;
+  if (mins === '09') {
+  color.style.classList ='.dawn'
+  time.innerHTML = normalTime + '<br>' + "Good Afternoon!";
+} else {
+  color.style.classList = '';
+}
 }
 
 
-setInterval(currentTime, 1000)
+setInterval(currentTime, 1000);
+
+
+/* random Hex generator
+
+
+*/

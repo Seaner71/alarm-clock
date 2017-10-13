@@ -1,13 +1,40 @@
-body {
-  background-color: red;
+.default {
+  background-color: #000;
+}
+.dawn {
+  background: url("./dawn_beach.jpg") no-repeat center;
+}
+.noon {
+
+}
+.evening {
+
+}
+#clock {
+  height: 100px;
+  width: 300px;
+  /*outline: 5px solid black;*/
+  margin: 50vh auto;
+  color: white;
+  text-align: center;
+  font-size: 2em;
+
 }
 
-#clock {
-  height: 200px;
-  width: 300px;
-  outline: 5px solid black;
-  margin: 50vh auto;
-  background-color: white;
-  text-align: center;
+#clock:hover {
+  animation-name: reverse;
+  animation-duration: 2s;
+}
 
+@keyframes reverse {
+0% {
+  transform: rotateY(0deg);
+  }
+
+50% {
+  transform: rotateY(180deg);
+  }
+100% {
+  transform: rotateY(0deg);
+}
 }
