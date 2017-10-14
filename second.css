@@ -2,14 +2,23 @@
   background-color: #000;
 }
 .dawn {
-  background: url("./dawn_beach.jpg") no-repeat center;
+  /*background: url("./dawn_beach.jpg") no-repeat center;*/
+  background: linear-gradient(#000 ,#a8d, #F8B04F);
 }
 .noon {
-
+  /*background: url("./dawn_valley_forge.jpg") no-repeat center;*/
+  background: linear-gradient(#00bfff,#a8d, #F8B04F);
 }
 .evening {
-
+  background: linear-gradient(#78d, #a8d,#eeb);
 }
+
+.night {
+  
+}
+
+
+
 #clock {
   height: 100px;
   width: 300px;
