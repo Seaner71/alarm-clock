@@ -35,4 +35,4 @@ function randHex() {
     randGradient = gradientArray[Math.floor(Math.random()*2)];
     color.style.background = `${randGradient}(${hexArray[0]},${hexArray[1]},${hexArray[2]})`;
 }
-setInterval(randHex, 10000)
+setInterval(randHex, 8000)

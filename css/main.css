@@ -1,5 +1,8 @@
 #back-ground {
-  background: url("../dawn_beach.jpg") no-repeat center;
+  background: url("../dawn_beach.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #clock {
